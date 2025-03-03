@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Profile</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-image">
+     <a href="index.html"><img src="https://static.thenounproject.com/png/251451-200.png" height="50px"/></a> 
+    </div>
+    <h1>Animal Profile Management</h1>
+    <ul>
+      <li>Basic Information</li>
+        <li>Physical Description</li>
+        <li>Health Information</li>
+    </ul>
+  </header>
+
+  <main class="main-content">
+    <section id="animal-info">
+      <h2>Animal Information</h2>
+      <form id="animal-form">
+        <!-- Basic Information -->
+        <fieldset>
+          <legend>Basic Information</legend>
+          <label for="animal-id">Animal ID (Auto-generated):</label>
+          <input type="text" id="animal-id" value="ANM-001" readonly>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter animal name">
+          <label for="species">Species and Breed:</label>
+          <input type="text" id="species" placeholder="E.g., Dog (Labrador)">
+          <label for="gender">Gender:</label>
+          <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Unknown">Unknown</option>
+          </select>
+          <label for="age">Age (in years/months):</label>
+          <input type="text" id="age" placeholder="Enter age">
+        </fieldset>
+
+        <!-- Physical Description -->
+        <fieldset>
+          <legend>Physical Description</legend>
+          <label for="color">Color:</label>
+          <input type="text" id="color" placeholder="Enter fur/coat color">
+          <label for="size">Size:</label>
+          <select id="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="Enter weight">
+          <label for="features">Distinctive Features:</label>
+          <textarea id="features" placeholder="E.g., scars, ear tags, collars"></textarea>
+        </fieldset>
+
+        <!-- Health Information -->
+        <fieldset>
+          <legend>Health Information</legend>
+          <label for="medical-history">Medical History:</label>
+          <textarea id="medical-history" placeholder="E.g., previous treatments, surgeries"></textarea>
+          <label for="vaccination-records">Vaccination Records:</label>
+          <textarea id="vaccination-records" placeholder="E.g., Rabies, Distemper"></textarea>
+          <label for="health-status">Current Health Status:</label>
+          <textarea id="health-status" placeholder="E.g., malnutrition, infections"></textarea>
+          <label for="allergies">Known Allergies:</label>
+          <input type="text" id="allergies" placeholder="Enter allergies">
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="button" class="btn" onclick="saveProfile()">Save Profile</button>
+      </form>
+    </section>
+
+    <!-- Display Saved Profiles -->
+    <section id="saved-profiles">
+      <h2>Saved Animal Profiles</h2>
+      <ul id="profile-list">
+        <li>No profiles added yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!--<script src="javascript/script.js"></script>-->
+</body>
+</html>

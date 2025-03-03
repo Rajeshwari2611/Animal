@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Care Management</title>
+    <style>
+      body {
+  background-image:url("data:image/jpeg;base64,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");    background-size: cover;
+ 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+        header {
+            background-color: #df5c11;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+            top: -20px;
+        }
+        .header-image {
+    text-align: left;
+    background-color: #df5c11;
+    height: 80px;
+    padding-top: 20px; 
+    margin-left: 20px;
+  }
+  
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgb(224, 130, 130);
+            background-image:url("https://plus.unsplash.com/premium_photo-1701757710054-ea0bb5f4ce2b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JhbmdlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    gap:50px;
+    box-sizing: border-box; /* Ensures padding doesn't exceed width */
+    background-color: rgb(235, 226, 215);
+        }
+        button {
+            background: #07566e;
+            color: rgb(27, 20, 20);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #1faad4;
+        }
+
+      </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-image">
+     <a href="index.html"><img src="https://static.thenounproject.com/png/251451-200.png" height="50px"/></a> 
+    </div>
+    <h1>Animal Healthcare Tracking</h1>
+</header>
+      <!-- Form for tracking healthcare -->
+    <form id="healthcare-form">
+        <h2>Healthcare Tracking</h2>
+        <label for="animal-id-health">Animal ID:</label>
+        <input type="text" id="animal-id-health" name="animalIdHealth" required>
+
+        <label for="health-check-date">Health Check Date:</label>
+        <input type="date" id="health-check-date" name="healthCheckDate" required>
+
+        <label for="treatment-details">Treatment Details:</label>
+        <textarea id="treatment-details" name="treatmentDetails" rows="4" required></textarea>
+
+        <button type="submit">Save Health Record</button>
+    </form>
+
+  
+   
+
+<script>
+  // Add JavaScript here for handling form submissions, validations, and storage
+  document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', event => {
+          event.preventDefault();
+          alert('Form submitted successfully!');
+      });
+  });
+</script>
+
+</body>
+</html>
+

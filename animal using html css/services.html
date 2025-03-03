@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Care Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #3a7bd5;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #3a7bd5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #345fa3;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: #3a7bd5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .dropdown-button:hover {
+            background: #345fa3;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 0.75rem 1rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f4f4f9;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Animal Care Management System</h1>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="dropdown-button">Dropdown button</button>
+        <ul class="dropdown-content">
+            <li><a href="home.html">Animal Profile</a></li>
+            <li><a href="contact.html">Adoption Process</a></li>
+            <li><a href="index.html">Healthcare</a></li>
+        </ul>
+    </div>
+
+    <!-- Form for managing animal profiles -->
+    <form id="animal-profile-form">
+        <h2>Animal Profile</h2>
+        <label for="animal-name">Name:</label>
+        <input type="text" id="animal-name" name="animalName" required>
+
+        <label for="animal-type">Type:</label>
+        <select id="animal-type" name="animalType" required>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="animal-age">Age:</label>
+        <input type="number" id="animal-age" name="animalAge" required>
+
+        <label for="animal-health">Health Status:</label>
+        <textarea id="animal-health" name="animalHealth" rows="4" required></textarea>
+
+        <button type="submit">Save Profile</button>
+    </form>
+
+    <!-- Form for adoption process -->
+    <form id="adoption-form">
+        <h2>Adoption Process</h2>
+        <label for="adopter-name">Adopter Name:</label>
+        <input type="text" id="adopter-name" name="adopterName" required>
+
+        <label for="contact-number">Contact Number:</label>
+        <input type="tel" id="contact-number" name="contactNumber" required>
+
+        <label for="animal-id">Animal ID:</label>
+        <input type="text" id="animal-id" name="animalId" required>
+
+        <label for="adoption-date">Adoption Date:</label>
+        <input type="date" id="adoption-date" name="adoptionDate" required>
+
+        <button type="submit">Submit Adoption</button>
+    </form>
+
+    <!-- Form for tracking healthcare -->
+    <form id="healthcare-form">
+        <h2>Healthcare Tracking</h2>
+        <label for="animal-id-health">Animal ID:</label>
+        <input type="text" id="animal-id-health" name="animalIdHealth" required>
+
+        <label for="health-check-date">Health Check Date:</label>
+        <input type="date" id="health-check-date" name="healthCheckDate" required>
+
+        <label for="treatment-details">Treatment Details:</label>
+        <textarea id="treatment-details" name="treatmentDetails" rows="4" required></textarea>
+
+        <button type="submit">Save Health Record</button>
+    </form>
+
+    <!-- Form for donation records -->
+    <form id="donation-form">
+        <h2>Donation Records</h2>
+        <label for="donor-name">Donor Name:</label>
+        <input type="text" id="donor-name" name="donorName" required>
+
+        <label for="donation-amount">Amount:</label>
+        <input type="number" id="donation-amount" name="donationAmount" required>
+
+        <label for="donation-date">Date:</label>
+        <input type="date" id="donation-date" name="donationDate" required>
+
+        <label for="donation-purpose">Purpose:</label>
+        <textarea id="donation-purpose" name="donationPurpose" rows="4" required></textarea>
+
+        <button type="submit">Record Donation</button>
+    </form>
+
+    <script>
+        // Add JavaScript here for handling form submissions, validations, and storage
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                alert('Form submitted successfully!');
+            });
+        });
+    </script>
+</body>
+</html>

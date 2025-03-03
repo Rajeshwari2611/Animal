@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal</title>
+    
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav main-nav">
+           <div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="nav-left">
+          <img src="https://png.pngtree.com/png-vector/20230124/ourmid/pngtree-pet-care-logo-png-image_6571337.png" alt="Pet Care Logo" height="100px" />
+        </div>
+           
+        
+        
+    
+        <h1 class="band-name band-name-large">Home</h1>
+        <button type="button"class="button center-button"><a href="home.html"><u>Home/</u></a><b>Home</b></button>
+    </header>
+
+<section class="feedback-section container">
+    <h2>User Feedback and Reports</h2>
+    <form id="feedback-report-form" action="/submit-feedback" method="post">
+        <!-- User Details -->
+        <fieldset>
+            <legend>User Details</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
+        </fieldset>
+        
+        <!-- Feedback Section -->
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Share your feedback..." rows="4" required></textarea>
+        </fieldset>
+        
+        <!-- Report a Stray Animal -->
+        <fieldset>
+            <legend>Report a Stray Animal</legend>
+            <label for="animal-type">Animal Type:</label>
+            <input type="text" id="animal-type" name="animal-type" placeholder="e.g., Dog, Cat, Cow" required>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter the location where the animal was seen" required>
+            
+            <label for="condition">Condition of the Animal:</label>
+            <textarea id="condition" name="condition" placeholder="Describe the condition of the animal..." rows="4" required></textarea>
+        </fieldset>
+        
+        <!-- Submit Button -->
+        <button type="Submit" class="btn-submit"><a href="home.html">Back</a></button>
+        <button type="Submit" class="btn-submit">Submit</button>
+    </form>
+</section>
+</body>
+</html>
